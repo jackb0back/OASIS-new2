@@ -58,7 +58,7 @@ function Show(cont) {
   if (cont === 'EVS') {
     IMG.src = 'assets/EveryOnesSky.png'
     Des.innerHTML = `<h1>Everyone's Sky </h1><p>an open world space shooter game</p>`
-    Launch.innerHTML = `<div style="  margin: 0 auto;"><br><br><br><br><br> <button class="bigBtn">Download</button> <button onclick="window.location.href = 'sites/everyOnesSky.html'" class="bigBtn">Play</button> </div>` 
+    Launch.innerHTML = `<div style="  margin: 0 auto;"><br><br><br><br><br> <button onclick='download("/OASIS 15.2/sites/everyOnesSky.html","everyOnesSky.html")' class="bigBtn">Download</button> <button onclick="window.location.href = 'sites/everyOnesSky.html'" class="bigBtn">Play</button> </div>` 
   }
 }
 Show('welcome')
@@ -80,7 +80,7 @@ function download(src,name) {
                         })
             }
 
-download("/OASIS 15.2/sites/everyOnesSky.html","everyOnesSky.html")
+//download("/OASIS 15.2/sites/everyOnesSky.html","everyOnesSky.html")
 </script>
 
 
