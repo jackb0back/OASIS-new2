@@ -24,7 +24,11 @@
 
 <img   style="  position:relative; top: 20px;padding-right: 10px " src="https://oasis-player.netlify.app/assets/icon204.png" width="65px" height="65px" onclick='Show("OASISP")'>
 <img   style="  position:relative; top: 20px; padding-right: 10px;" src="assets/EveryOnesSky.png" width="65px" height="65px" onclick='Show("EVS")'>
+<img   style="  position:relative; top: 20px; padding-right: 10px;" src="https://cdn.iconscout.com/icon/free/png-256/minecraft-2752120-2284937.png" width="65px" height="65px" onclick='Show("MCJS")'>
+<img   style="  position:relative; top: 20px; padding-right: 10px;" src="assets/chromaincident.png" width="65px" height="65px" onclick='Show("chromaincident")'>
+<img   style="  position:relative; top: 20px; padding-right: 10px;" src="assets/spaceShooter.png" width="65px" height="65px" onclick='Show("spaceShooter")'>
 
+<button onclick="Show('spaceShooter')" class="bigBtn"></button>
 </div>
 
 
@@ -56,7 +60,22 @@ function Show(cont) {
   if (cont === 'EVS') {
     IMG.src = 'assets/EveryOnesSky.png'
     Des.innerHTML = `<h1>Everyone's Sky </h1><p>an open world space shooter game</p>`
-    Launch.innerHTML = `<div style="  margin: 0 auto;"><br><br><br><br><br> <button class="bigBtn">Download</button> <button onclick="window.location.href = 'sites/everyOnesSky.html'" class="bigBtn">Play</button> </div>` 
+    Launch.innerHTML = `<div style="  margin: 0 auto;"><br><br><br><br><br><a href="file:///home/chronos/u-324b9bc9f61a91cc0e879a0511bda4288ee50a30/MyFiles/Downloads/OASIS%2015.2/sites/everyOnesSky.html" download> <button class="bigBtn">Download</button></a> <button onclick="window.location.href = 'sites/everyOnesSky.html'" class="bigBtn">Play</button> </div>` 
+  }
+   if (cont === 'MCJS') {
+    IMG.src = 'assets/MCJS.png'
+    Des.innerHTML = `<h1>Minecraft JS</h1><p>a minecraft clone</p>`
+    Launch.innerHTML = `<div style="  margin: 0 auto;"><br><br><br><br><br> <button class="bigBtn">Download</button> <button onclick="window.location.href = 'sites/mcjs.html'" class="bigBtn">Play</button> </div>` 
+  }
+  if (cont === 'chromaincident') {
+    IMG.src = 'assets/chromaincident.png'
+    Des.innerHTML = `<h1>chromaincident</h1><p>a top down shooter game</p>`
+    Launch.innerHTML = `<div style="  margin: 0 auto;"><br><br><br><br><br> <button class="bigBtn">Download</button> <button onclick="window.location.href = 'sites/chromaincident.html'" class="bigBtn">Play</button> </div>` 
+  }
+  if (cont === 'spaceShooter') {
+    IMG.src = 'assets/spaceShooter.png'
+    Des.innerHTML = `<h1>Radius raid</h1><p>a top down space shooter game</p>`
+    Launch.innerHTML = `<div style="  margin: 0 auto;"><br><br><br><br><br> <button class="bigBtn">Download</button> <button onclick="window.location.href = 'sites/spaceShooter.html'" class="bigBtn">Play</button> </div>` 
   }
 }
 Show('welcome')
