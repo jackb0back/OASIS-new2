@@ -27,8 +27,11 @@
 <img   style="  position:relative; top: 20px; padding-right: 10px;" src="https://cdn.iconscout.com/icon/free/png-256/minecraft-2752120-2284937.png" width="65px" height="65px" onclick='Show("MCJS")'>
 <img   style="  position:relative; top: 20px; padding-right: 10px;" src="assets/chromaincident.png" width="65px" height="65px" onclick='Show("chromaincident")'>
 <img   style="  position:relative; top: 20px; padding-right: 10px;" src="assets/spaceShooter.png" width="65px" height="65px" onclick='Show("spaceShooter")'>
+<img   style="  position:relative; top: 20px; padding-right: 10px;" src="assets/stack.png" width="65px" height="65px" onclick='Show("STACK")'>
+<img   style="  position:relative; top: 20px; padding-right: 10px;" src="assets/SinIco.png" width="65px" height="65px" onclick='Show("Sinuous")'>
+<img   style="  position:relative; top: 20px; padding-right: 10px;" src="assets/cookieIco.ico" width="65px" height="65px" onclick='Show("COOKIE")'>
+<button onclick="Show('COOKIE')" class="bigBtn"></button>
 
-<button onclick="Show('spaceShooter')" class="bigBtn"></button>
 </div>
 
 
@@ -46,21 +49,23 @@ var Sel = 'welcome'
 var Img = document.getElementById('IMG')
 var Des = document.getElementById('Des')
 var Launch = document.getElementById('Lnav')
+var imgs = []
 function Show(cont) {
   if (cont === 'welcome') {
     IMG.src = 'assets/welcome.png'
     Des.innerHTML = `<h1>Welcome to OASIS</h1>`
-    Launch.innerHTML = `<div style="  margin: 0 auto;"><br><br><br><br><br> <button class="bigBtn">Download</button> <button class="bigBtn">Play</button> </div>`
+    Launch.innerHTML = `<div style="  margin: 0 auto;"><br><br><br><br><br>  <button class="bigBtn">Play</button> </div>`
   }
   if (cont === 'OASISP') {
     IMG.src = 'https://oasis-player.netlify.app/assets/icon204.png'
     Des.innerHTML = `<h1>OASIS player</h1><p>nes,gba,etc emulator</p>`
-    Launch.innerHTML = `<div style="  margin: 0 auto;"><br><br><br><br><br> <button class="bigBtn">Download</button> <button class="bigBtn">Play</button> </div>` 
+    Launch.innerHTML = `<div style="  margin: 0 auto;"><br><br><br><br><br> <button class="bigBtn">Download</button> <button  onclick="window.location.href = 'https://oasis-player.netlify.app/'" class="bigBtn">Play</button> </div>` 
   }
   if (cont === 'EVS') {
     IMG.src = 'assets/EveryOnesSky.png'
     Des.innerHTML = `<h1>Everyone's Sky </h1><p>an open world space shooter game</p>`
-    Launch.innerHTML = `<div style="  margin: 0 auto;"><br><br><br><br><br><a href="file:///home/chronos/u-324b9bc9f61a91cc0e879a0511bda4288ee50a30/MyFiles/Downloads/OASIS%2015.2/sites/everyOnesSky.html" download> <button class="bigBtn">Download</button></a> <button onclick="window.location.href = 'sites/everyOnesSky.html'" class="bigBtn">Play</button> </div>` 
+    Launch.innerHTML = `<div style="  margin: 0 auto;"><br><br><br><br><br><a href="downloads/everyOnesSky.zip" download> <button class="bigBtn">Download</button></a> 
+    <button onclick="window.location.href = 'sites/everyOnesSky.html'" class="bigBtn">Play</button> </div>` 
   }
    if (cont === 'MCJS') {
     IMG.src = 'assets/MCJS.png'
@@ -70,12 +75,27 @@ function Show(cont) {
   if (cont === 'chromaincident') {
     IMG.src = 'assets/chromaincident.png'
     Des.innerHTML = `<h1>chromaincident</h1><p>a top down shooter game</p>`
-    Launch.innerHTML = `<div style="  margin: 0 auto;"><br><br><br><br><br> <button class="bigBtn">Download</button> <button onclick="window.location.href = 'sites/chromaincident.html'" class="bigBtn">Play</button> </div>` 
+    Launch.innerHTML = `<div style="  margin: 0 auto;"><br><br><br><br><br> <a href="downloads/chromaincident.zip" download> <button class="bigBtn">Download</button></a> <button onclick="window.location.href = 'sites/chromaincident.html'" class="bigBtn">Play</button> </div>` 
   }
   if (cont === 'spaceShooter') {
     IMG.src = 'assets/spaceShooter.png'
     Des.innerHTML = `<h1>Radius raid</h1><p>a top down space shooter game</p>`
-    Launch.innerHTML = `<div style="  margin: 0 auto;"><br><br><br><br><br> <button class="bigBtn">Download</button> <button onclick="window.location.href = 'sites/spaceShooter.html'" class="bigBtn">Play</button> </div>` 
+    Launch.innerHTML = `<div style="  margin: 0 auto;"><br><br><br><br><br><a href="downloads/spaceShooter.zip" download>  <button class="bigBtn">Download</button></a> <button onclick="window.location.href = 'sites/spaceShooter.html'" class="bigBtn">Play</button> </div>` 
+  }
+  if (cont === 'STACK') {
+    IMG.src = 'assets/stack.png'
+    Des.innerHTML = `<h1>tower blocks</h1><p>stack blocks</p>`
+    Launch.innerHTML = `<div style="  margin: 0 auto;"><br><br><br><br><br><a href="downloads/stack.zip" download>  <button class="bigBtn">Download</button></a> <button onclick="window.location.href = 'sites/stack.html'" class="bigBtn">Play</button> </div>` 
+  }
+  if (cont === 'COOKIE') {
+    IMG.src = 'assets/cookie.png'
+    Des.innerHTML = `<h1>cookie clicker</h1><p>cookies</p>`
+    Launch.innerHTML = `<div style="  margin: 0 auto;"><br><br><br><br><br><a href="downloads/cookie.zip" download>  <button class="bigBtn">Download</button></a> <button onclick="window.location.href = 'sites/cookie/index.html'" class="bigBtn">Play</button> </div>` 
+  }
+  if (cont === 'Sinuous') {
+    IMG.src = 'assets/Sinuous.png'
+    Des.innerHTML = `<h1>Sinuous</h1><p>avoid the red dots</p>`
+    Launch.innerHTML = `<div style="  margin: 0 auto;"><br><br><br><br><br><a href="downloads/dodge.zip" download>  <button class="bigBtn">Download</button></a> <button onclick="window.location.href = 'sites/dodge/index.html'" class="bigBtn">Play</button> </div>` 
   }
 }
 Show('welcome')
@@ -103,7 +123,7 @@ background-color: black;
 width: 800px;
 height: 55%;
   margin: 0 auto;
-margin-left: 10%;
+margin-left: 3%;
 color: white;
 }
 
@@ -113,7 +133,7 @@ width: 600px;
 height: 25%;
 position: absolute;
 top: 7%;
-right: 5%;
+right: 3%;
 color: white;
 }
 #Lnav {
@@ -122,7 +142,7 @@ width: 600px;
 height: 25%;
 position: absolute;
 top: 35%;
-right: 5%;
+right: 3%;
 }
 #cont {
 width: 100%;
