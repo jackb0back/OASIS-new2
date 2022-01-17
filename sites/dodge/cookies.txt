@@ -1,0 +1,4 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+www.sinuousgame.com	TRUE	/	FALSE	1999999999	PHPSESSID	tarc268d12kgqfic7pl497uiq3
+
